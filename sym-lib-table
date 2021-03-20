@@ -1,0 +1,13 @@
+(sym_lib_table
+  (lib (name bkm-68x-simple-rescue)(type Legacy)(uri ${KIPRJMOD}/bkm-68x-simple-rescue.lib)(options "")(descr ""))
+  (lib (name adg734)(type Legacy)(uri ${KIPRJMOD}/adg734.lib)(options "")(descr ""))
+  (lib (name adg1611)(type Legacy)(uri ${KIPRJMOD}/adg1611.lib)(options "")(descr ""))
+  (lib (name ths7374)(type Legacy)(uri ${KIPRJMOD}/ths7374.lib)(options "")(descr ""))
+  (lib (name mezz-conn-02x50)(type Legacy)(uri ${KIPRJMOD}/mezz-conn-02x50.lib)(options "")(descr ""))
+  (lib (name isl59885)(type Legacy)(uri ${KIPRJMOD}/isl59885.lib)(options "")(descr ""))
+  (lib (name esp32_nodemcu)(type Legacy)(uri ${KIPRJMOD}/esp32_nodemcu.lib)(options "")(descr ""))
+  (lib (name tc7sz125fu)(type Legacy)(uri ${KIPRJMOD}/tc7sz125fu.lib)(options "")(descr ""))
+  (lib (name mic3490)(type Legacy)(uri ${KIPRJMOD}/mic3490.lib)(options "")(descr ""))
+  (lib (name max10-eval)(type Legacy)(uri ${KIPRJMOD}/max10-eval.lib)(options "")(descr ""))
+  (lib (name tc7wh125)(type Legacy)(uri ${KIPRJMOD}/tc7wh125.lib)(options "")(descr ""))
+)

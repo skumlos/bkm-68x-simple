@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name TX24-100R-LT-H1E)(type KiCad)(uri "$(KIPRJMOD)/TX24-100R-LT-H1E.pretty")(options "")(descr ""))
+  (lib (name BNC-THT)(type KiCad)(uri "$(KIPRJMOD)/bnc-tht.pretty")(options "")(descr ""))
+  (lib (name NODEMCU_ESP32)(type KiCad)(uri "$(KIPRJMOD)/nodemcu_esp32.pretty")(options "")(descr ""))
+  (lib (name max10-eval)(type KiCad)(uri ${KIPRJMOD}/max10-eval)(options "")(descr ""))
+  (lib (name PTS645)(type KiCad)(uri ${KIPRJMOD}/PTS645)(options "")(descr ""))
+)
