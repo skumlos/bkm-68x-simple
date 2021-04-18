@@ -96,7 +96,7 @@ Wire Wire Line
 	3300 5800 3300 5850
 Wire Wire Line
 	3650 5800 3800 5800
-Text GLabel 3200 5800 0    60   Input ~ 0
+Text GLabel 2900 5800 0    60   Input ~ 0
 VSYNC_SEP
 Connection ~ 3300 5800
 $Comp
@@ -161,14 +161,14 @@ Wire Wire Line
 	5450 6000 5450 5950
 Connection ~ 5350 6000
 Connection ~ 5450 5600
-Text GLabel 5600 5600 2    60   Input ~ 0
+Text GLabel 5900 5600 2    60   Input ~ 0
 HSYNC_SEP
 $Comp
 L bkm-68x-simple-rescue:Conn_Coaxial J1
 U 1 1 5F267E57
 P 900 1100
 F 0 "J1" H 910 1220 50  0000 C CNN
-F 1 "Y_G" V 1015 1100 50  0000 C CNN
+F 1 "PR_R" V 1015 1100 50  0000 C CNN
 F 2 "BNC-THT:BNC-THT" H 900 1100 50  0001 C CNN
 F 3 "" H 900 1100 50  0001 C CNN
 	1    900  1100
@@ -198,7 +198,7 @@ F 3 "" H 1450 2300 50  0001 C CNN
 	1    1450 2300
 	-1   0    0    1   
 $EndComp
-Text GLabel 1700 1100 2    60   Input ~ 0
+Text GLabel 1700 2150 2    60   Input ~ 0
 Y_G_IN
 $Comp
 L bkm-68x-simple-rescue:D_Small_ALT D1
@@ -251,7 +251,7 @@ L bkm-68x-simple-rescue:Conn_Coaxial J3
 U 1 1 5F269A8F
 P 900 3200
 F 0 "J3" H 910 3320 50  0000 C CNN
-F 1 "PR_R" V 1015 3200 50  0000 C CNN
+F 1 "PB_B" V 1015 3200 50  0000 C CNN
 F 2 "BNC-THT:BNC-THT" H 900 3200 50  0001 C CNN
 F 3 "" H 900 3200 50  0001 C CNN
 	1    900  3200
@@ -268,7 +268,7 @@ F 3 "" H 1450 1250 50  0001 C CNN
 	1    1450 1250
 	-1   0    0    1   
 $EndComp
-Text GLabel 1700 3200 2    60   Input ~ 0
+Text GLabel 1700 1100 2    60   Input ~ 0
 PR_R_IN
 $Comp
 L bkm-68x-simple-rescue:D_Small_ALT D5
@@ -321,7 +321,7 @@ L bkm-68x-simple-rescue:Conn_Coaxial J2
 U 1 1 5F269E83
 P 900 2150
 F 0 "J2" H 910 2270 50  0000 C CNN
-F 1 "PB_B" V 1015 2150 50  0000 C CNN
+F 1 "Y_G" V 1015 2150 50  0000 C CNN
 F 2 "BNC-THT:BNC-THT" H 900 2150 50  0001 C CNN
 F 3 "" H 900 2150 50  0001 C CNN
 	1    900  2150
@@ -338,7 +338,7 @@ F 3 "" H 1450 3350 50  0001 C CNN
 	1    1450 3350
 	-1   0    0    1   
 $EndComp
-Text GLabel 1700 2150 2    60   Input ~ 0
+Text GLabel 1700 3200 2    60   Input ~ 0
 PB_B_IN
 $Comp
 L bkm-68x-simple-rescue:D_Small_ALT D3
@@ -497,11 +497,11 @@ Wire Wire Line
 	3600 1700 3700 1700
 Wire Wire Line
 	3600 1850 3700 1850
-Text GLabel 3400 1400 0    60   Input ~ 0
-Y_G_IN
 Text GLabel 3400 1550 0    60   Input ~ 0
-PB_B_IN
+Y_G_IN
 Text GLabel 3400 1700 0    60   Input ~ 0
+PB_B_IN
+Text GLabel 3400 1400 0    60   Input ~ 0
 PR_R_IN
 $Comp
 L power:GNDA #PWR013
@@ -515,29 +515,16 @@ F 3 "" H 3700 2200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GNDA #PWR014
-U 1 1 5F26B60D
-P 4900 2200
-F 0 "#PWR014" H 4900 1950 50  0001 C CNN
-F 1 "GNDA" V 4900 2000 50  0000 C CNN
-F 2 "" H 4900 2200 50  0001 C CNN
-F 3 "" H 4900 2200 50  0001 C CNN
-	1    4900 2200
-	0    -1   -1   0   
-$EndComp
-$Comp
 L adg734:ADG734 U4
 U 1 1 5F26BA5F
 P 4400 4100
 F 0 "U4" H 4800 3650 60  0000 C CNN
 F 1 "ADG734" H 4200 3650 60  0000 C CNN
-F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 4250 4400 60  0001 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 4250 4400 60  0001 C CNN
 F 3 "" H 4250 4400 60  0001 C CNN
 	1    4400 4100
 	1    0    0    -1  
 $EndComp
-Text GLabel 4900 1550 2    60   Input ~ 0
-Y_G_AMP
 Text GLabel 4900 1700 2    60   Input ~ 0
 PB_B_AMP
 Text GLabel 4900 1400 2    60   Input ~ 0
@@ -633,7 +620,7 @@ F 3 "" H 5500 2250 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4900 2050 5200 2050
+	4900 2050 5000 2050
 Wire Wire Line
 	5300 2250 5200 2250
 Wire Wire Line
@@ -865,7 +852,7 @@ Wire Wire Line
 	7900 2950 7900 3000
 Connection ~ 7900 2950
 NoConn ~ 4900 6000
-Text GLabel 9250 4450 2    60   Input ~ 0
+Text GLabel 9550 4450 2    60   Input ~ 0
 HSYNC
 $Comp
 L power:GNDA #PWR031
@@ -880,7 +867,7 @@ F 3 "" H 8900 4650 50  0001 C CNN
 $EndComp
 Text GLabel 8550 4450 0    60   Input ~ 0
 HSYNC_OUT
-Text GLabel 9250 5250 2    60   Input ~ 0
+Text GLabel 9550 5250 2    60   Input ~ 0
 VSYNC
 Text GLabel 8550 4200 0    60   Input ~ 0
 ~VIDEO_OE
@@ -1267,6 +1254,61 @@ F 1 "-5VA" V 8015 1177 50  0000 L CNN
 F 2 "" H 8000 1050 50  0001 C CNN
 F 3 "" H 8000 1050 50  0001 C CNN
 	1    8000 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 2200 5000 2200
+Wire Wire Line
+	5000 2200 5000 2050
+Connection ~ 5000 2050
+Wire Wire Line
+	5000 2050 5200 2050
+Text GLabel 4900 1550 2    60   Input ~ 0
+Y_G_AMP
+$Comp
+L bkm-68x-simple-rescue:R R71
+U 1 1 60729AD2
+P 9400 4450
+F 0 "R71" V 9480 4450 50  0000 C CNN
+F 1 "47R" V 9400 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9330 4450 50  0001 C CNN
+F 3 "" H 9400 4450 50  0001 C CNN
+	1    9400 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L bkm-68x-simple-rescue:R R72
+U 1 1 6072CA13
+P 9400 5250
+F 0 "R72" V 9480 5250 50  0000 C CNN
+F 1 "47R" V 9400 5250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9330 5250 50  0001 C CNN
+F 3 "" H 9400 5250 50  0001 C CNN
+	1    9400 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L bkm-68x-simple-rescue:R R43
+U 1 1 608268F3
+P 3050 5800
+F 0 "R43" V 3130 5800 50  0000 C CNN
+F 1 "R" V 3050 5800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2980 5800 50  0001 C CNN
+F 3 "" H 3050 5800 50  0001 C CNN
+	1    3050 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2800 5800 2900 5800
+$Comp
+L bkm-68x-simple-rescue:R R42
+U 1 1 60830305
+P 5750 5600
+F 0 "R42" V 5830 5600 50  0000 C CNN
+F 1 "R" V 5750 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5680 5600 50  0001 C CNN
+F 3 "" H 5750 5600 50  0001 C CNN
+	1    5750 5600
 	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
