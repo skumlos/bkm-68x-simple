@@ -8,4 +8,5 @@
   (lib (name tc7sz125fu)(type Legacy)(uri ${KIPRJMOD}/tc7sz125fu.lib)(options "")(descr ""))
   (lib (name max10-eval)(type Legacy)(uri ${KIPRJMOD}/max10-eval.lib)(options "")(descr ""))
   (lib (name tc7wh125)(type Legacy)(uri ${KIPRJMOD}/tc7wh125.lib)(options "")(descr ""))
+  (lib (name FPGA_Intel)(type Legacy)(uri ${KIPRJMOD}/FPGA_Intel.lib)(options "")(descr ""))
 )
