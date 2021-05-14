@@ -22,30 +22,55 @@ Compared to the original BKM-68X, this has severely better sync handling seeming
 The list of tested consoles that syncs fine as of revision B. is:
 
 SNES (2CHIP US) 60Hz (CSYNC)
+
 SNES (1CHIP FAT US) 60Hz (CSYNC)
+
 SNES (2CHIP EU) 50Hz (Sync on luma)
+
 SNES (1CHIP EU, SNSP-1CHIP-01) 50Hz (Sync on luma)
+
 Genesis (US) 60Hz (CVBS sync)
+
 Genesis 2 (US) 60Hz (CSYNC)
+
 Mega Drive (EU) 50Hz (CVBS sync)
+
 Mega Drive 2 (EU, DFO) 60Hz (CSYNC)
+
 Mega Drive 2 (EU, DFO) 50Hz (CSYNC)
+
 Master System (on Genesis through Power Base) 60Hz (CVBS sync)
+
 Master System (EU, DFO) 60Hz (CSYNC)
+
 Master System (EU, DFO) 50Hz (CSYNC)
+
 Master System (EU, VA3, no DFO) 60Hz (59,38Hz) (CSYNC)
+
 Master System (EU, VA3, no DFO) 50Hz (CSYNC)
+
 Nintendo 64 (NUSJ) 60Hz (THS7314 RGB) (CSYNC)
+
 PSone SCPH-101 (EU) (MM3+MFO) 60Hz (RGC CSYNC)
+
 PSone SCPH-101 (EU) (MM3+MFO) 50Hz (RGC CSYNC)
+
 Wii (EU) 576i 50Hz (YPbPr)
+
 Wii (EU) 480i 60Hz (YPbPr)
+
 Wii (EU) 480p 60Hz (YPbPr)
+
 PS3 (EU) 576i 50Hz (YPbPr)
+
 PS3 (EU) 576p 50Hz (YPbPr)
+
 PS3 (EU) 720p 60Hz (YPbPr)
+
 PS3 (EU) 1080i 60Hz (YPbPr)
+
 PC Engine (White), External RGB mod (THS7374, Genesis 2 plug), 60Hz (CSYNC)
+
 Analogue Nt Mini 2.0 60Hz RGBS (so CSYNC)
 
 Master System with CVBS sync works, but sometimes "glitches". This is apparently due to the quite noisy CVBS signal, which the sync separator picks up. Without the color filter it is unusable.
