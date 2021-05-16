@@ -4,4 +4,5 @@
   (lib (name max10-eval)(type KiCad)(uri ${KIPRJMOD}/max10-eval)(options "")(descr ""))
   (lib (name PTS645)(type KiCad)(uri ${KIPRJMOD}/PTS645)(options "")(descr ""))
   (lib (name JS202011SCQN)(type KiCad)(uri ${KIPRJMOD}/JS202011SCQN.pretty)(options "")(descr ""))
+  (lib (name keystone-7794)(type KiCad)(uri ${KIPRJMOD}/KEYSTONE_7794/keystone-7794.pretty)(options "")(descr ""))
 )

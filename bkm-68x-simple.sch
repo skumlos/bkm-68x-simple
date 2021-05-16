@@ -37,4 +37,36 @@ U 5F269FDE
 F0 "FPGA" 60
 F1 "fpga.sch" 60
 $EndSheet
+Wire Notes Line
+	850  6000 3050 6000
+Wire Notes Line
+	3050 6000 3050 4550
+Wire Notes Line
+	3050 4550 850  4550
+Wire Notes Line
+	850  4550 850  6000
+Text Notes 1700 4500 0    50   ~ 0
+MECHANICAL
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 60AB1DD9
+P 1150 4900
+F 0 "H1" H 1250 4946 50  0000 L CNN
+F 1 "SCREWMOUNT_90DEG" H 1250 4855 50  0000 L CNN
+F 2 "keystone-7794:7794-X" H 1150 4900 50  0001 C CNN
+F 3 "~" H 1150 4900 50  0001 C CNN
+	1    1150 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 60AB2057
+P 1150 5600
+F 0 "H2" H 1250 5646 50  0000 L CNN
+F 1 "SCREWMOUNT_90DEG" H 1250 5555 50  0000 L CNN
+F 2 "keystone-7794:7794-X" H 1150 5600 50  0001 C CNN
+F 3 "~" H 1150 5600 50  0001 C CNN
+	1    1150 5600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
