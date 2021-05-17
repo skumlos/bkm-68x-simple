@@ -79,6 +79,8 @@ It is generally recommended to use CSYNC signals.
 
 Revision history:
 
+C: Added mounting screw brackets and shortened board for a PCB front
+
 B: Added onboard FPGA, color filter, rerouted signals.
 
 A: Initial unreleased version
