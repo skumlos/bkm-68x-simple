@@ -89,4 +89,10 @@ A: Initial unreleased version
 
 More information @ https://www.immerhax.com
 
+Credits:
+Mathias Hyldgaard for providing me with a BVM-A20, which initiated the whole project!
+Bob from RetroRGB for testing and listening to my woes :)
+The secret benefactor(s) of the original BKM-68X which made the whole project much easier, and ultimately made it possible!
+Steve Nutter for being a helpful guy within the pro monitor scene!
+
 (2021) Martin Hejnfelt, martin@hejnfelt.com
