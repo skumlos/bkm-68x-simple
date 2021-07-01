@@ -1,25 +1,43 @@
 BKM-68X alternative input board
 
-This project aims to serve as an alternative to the crazy expensive Sony BKM-68X RGB/YPbPr input card for Sony BVM-A monitors like the BVM-A14F5, A20F1, A24E1W and A32E1W (M/U/A).
+This project aims to serve as an alternative to the crazy expensive Sony BKM-68X RGB/YPbPr
+input card for Sony BVM-A monitors like the BVM-A14F5, A20F1, A24E1W and A32E1W (M/U/A).
 
-The board is rather simple albeit has some components that are not so simple to hand solder, and it also has a quite high component count (due to a load of resistors and caps).
+The board is rather simple albeit has some components that are not so simple to hand solder,
+and it also has a quite high component count (due to a load of resistors and caps).
 
-It's buildup is basically an analog section that deals with video, and a digital section that speaks to the monitor.
-The analog section buffers the video by an THS7374 (with the LPF disabled!) and throws those through an ADG1611 (or compatible) switch, working via the VIDEO_OE_X signal from the FPGA.
-The sync signal is separated through an ISL59885 with a color filter in front (as per the datasheet), and the signal to be separated (external or Y signal) is chosen via INT_EXT_X signal to an ADG734 switch.
-These are then passed to the FPGA which inverts to positive sync (thus card expects negative sync right now), which then sends the two signals into the monitor.
+It's buildup is basically an analog section that deals with video, and a digital section
+that speaks to the monitor.
 
-The digital section consists of a FPGA (Intel MAX 10 in an EQFP-144 package as of this writing) with a buttload of schmitt triggers and line drivers, all replicated from the original 68X service manual.
-The card thus tries to be electrically similar to the original, at the interface level.
+The analog section buffers the video by an THS7374 (with the LPF disabled!) and throws
+those through an ADG1611 (or compatible) switch, working via the VIDEO_OE_X signal from
+the FPGA.
 
-The FPGA is expected to be programmed with the HDL from https://github.com/skumlos/bkm-68x-fpga (unless something better appears).
+The sync signal is separated through an ISL59885 with a color filter in front (as per
+the datasheet), and the signal to be separated (external or Y signal) is chosen via
+INT_EXT_X signal to an ADG734 switch.
 
-75 Ohm termination can be selected by the switches, which either terminates, or passthroughs (in that case external terminators are needed, unless signal is actually passed through to a terminating monitor).
+These are then passed to the FPGA which inverts to positive sync (thus card expects
+ negative sync right now), which then sends the two signals into the monitor.
 
-The card has no aperture circuit so it can only pass the signal straight through to the monitor as it originally is.
+The digital section consists of a FPGA (Intel MAX 10 in an EQFP-144 package as of this
+writing) with a buttload of schmitt triggers and line drivers, all replicated from the
+original 68X service manual. The card thus tries to be electrically similar to the
+original, at the interface level.
+
+The FPGA is expected to be programmed with the HDL from https://github.com/skumlos/bkm-68x-fpga
+(unless something better appears).
+
+75 Ohm termination can be selected by the switches, which either terminates, or passthroughs
+(in that case external terminators are needed, unless signal is actually passed through to a
+terminating monitor).
+
+The card has no aperture circuit so it can only pass the signal straight through to the monitor
+as it originally is (buffered and level conditioned).
 
 Compared to the original BKM-68X, this has severely better sync handling seemingly.
-The list of tested consoles that syncs fine as of revision B. is:
+
+The list of tested consoles that syncs fine as of revision C1. is:
 
 SNES (2CHIP US) 60Hz (CSYNC)
 
@@ -73,9 +91,17 @@ PC Engine (White), External RGB mod (THS7374, Genesis 2 plug), 60Hz (CSYNC)
 
 Analogue Nt Mini 2.0 60Hz RGBS (so CSYNC)
 
-Master System with CVBS sync works, but sometimes "glitches". This is apparently due to the quite noisy CVBS signal, which the sync separator picks up. Without the color filter it is unusable.
+Amiga 500 RGBS (PAL) 50Hz (CSYNC)
 
-It is generally recommended to use CSYNC signals.
+A load of MiSTer cores which are normally deemed problematic, including DoDonPachi
+whose whack VSYNC of 57.6 Hz makes the original BKM-68X scroll the picture with a
+steady OSD, while this version has a steady picture with a rolling OSD :)
+
+Master System with CVBS sync works, but sometimes "glitches". This is apparently
+due to the quite noisy CVBS signal, which the sync separator picks up. Without
+the color filter it is unusable.
+
+It is generally recommended to use CSYNC signals at 75 Ohm levels.
 
 Revision history:
 
@@ -85,7 +111,7 @@ C: Added mounting screw brackets and shortened board for a PCB front, change swi
 
 B: Added onboard FPGA, color filter, rerouted signals.
 
-A: Initial unreleased version
+A: Initial version
 
 More information @ https://www.immerhax.com
 
@@ -94,5 +120,8 @@ Mathias Hyldgaard for providing me with a BVM-A20, which initiated the whole pro
 Bob from RetroRGB for testing and listening to my woes :)
 The secret benefactor(s) of the original BKM-68X which made the whole project much easier, and ultimately made it possible!
 Steve Nutter for being a helpful guy within the pro monitor scene!
+The people on the CRT discord and Professional and Broadcast Monitor Facebook group!
 
 (2021) Martin Hejnfelt, martin@hejnfelt.com
+
+This work is released under the CERN Open Hardware Licence version 2 (CERN-OHL-W), see LICENCE.TXT

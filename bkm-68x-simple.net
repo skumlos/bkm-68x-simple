@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/martin/SkumServer/eda-projects/bkm-68x-simple/bkm-68x-simple.sch)
-    (date "2021-06-01T23:54:02 CEST")
+    (date "2021-06-16T00:20:44 CEST")
     (tool "Eeschema 5.1.10-88a1d61d58~88~ubuntu20.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -60,14 +60,14 @@
         (comment (number 4) (value "")))))
   (components
     (comp (ref H1)
-      (value SCREWMOUNT_90DEG)
+      (value "Keystone 7794")
       (footprint keystone-7794:7794-X)
       (datasheet ~)
       (libsource (lib Mechanical) (part MountingHole) (description "Mounting Hole without connection"))
       (sheetpath (names /) (tstamps /))
       (tstamp 60AB1DD9))
     (comp (ref H2)
-      (value SCREWMOUNT_90DEG)
+      (value "Keystone 7794")
       (footprint keystone-7794:7794-X)
       (datasheet ~)
       (libsource (lib Mechanical) (part MountingHole) (description "Mounting Hole without connection"))
