@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "5.1.10-88a1d61d58~88~ubuntu20.04.1"
     },
-    "CreationDate":  "2021-06-01T23:58:11+02:00"
+    "CreationDate":  "2021-07-15T22:52:49+02:00"
   },
   "GeneralSpecs":
   {
@@ -15,7 +15,7 @@
     {
       "Name": "bkm-68x-simple",
       "GUID": "626b6d2d-3638-4782-9d73-696d706c652e",
-      "Revision": "rev?"
+      "Revision": "D"
     },
     "Size":
     {

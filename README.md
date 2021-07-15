@@ -11,14 +11,15 @@ that speaks to the monitor.
 
 The analog section buffers the video by an THS7374 (with the LPF disabled!) and throws
 those through an ADG1611 (or compatible) switch, working via the VIDEO_OE_X signal from
-the FPGA.
+the FPGA. The Y/G signal is first routed through an ISL4089 which strips the sync part 
+(if needed) from the signal to avoid too bright picture in YPbPr and SoG signals.
 
 The sync signal is separated through an ISL59885 with a color filter in front (as per
 the datasheet), and the signal to be separated (external or Y signal) is chosen via
 INT_EXT_X signal to an ADG734 switch.
 
-These are then passed to the FPGA which inverts to positive sync (thus card expects
- negative sync right now), which then sends the two signals into the monitor.
+These are then passed to the FPGA which detects sync polarity and changes accordingly
+to positive sync, and then sends the two signals into the monitor.
 
 The digital section consists of a FPGA (Intel MAX 10 in an EQFP-144 package as of this
 writing) with a buttload of schmitt triggers and line drivers, all replicated from the
@@ -104,6 +105,8 @@ the color filter it is unusable.
 It is generally recommended to use CSYNC signals at 75 Ohm levels.
 
 Revision history:
+
+D: Add DC restore and sync-removal circuit on Y/G line
 
 C1: Minor layout changes
 
