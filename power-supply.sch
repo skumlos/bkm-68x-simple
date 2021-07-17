@@ -1256,4 +1256,28 @@ F 3 "" H 10000 2900 50  0001 C CNN
 	1    10000 2900
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x02_Male J18
+U 1 1 60F3F876
+P 2250 3550
+F 0 "J18" H 2358 3731 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 2358 3640 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2250 3550 50  0001 C CNN
+F 3 "~" H 2250 3550 50  0001 C CNN
+	1    2250 3550
+	1    0    0    -1  
+$EndComp
+Text GLabel 2450 3550 2    50   Input ~ 0
+STBY_5V
+$Comp
+L power:GNDD #PWR0279
+U 1 1 60F4055F
+P 2450 3650
+F 0 "#PWR0279" H 2450 3400 50  0001 C CNN
+F 1 "GNDD" V 2450 3450 50  0000 C CNN
+F 2 "" H 2450 3650 50  0001 C CNN
+F 3 "" H 2450 3650 50  0001 C CNN
+	1    2450 3650
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

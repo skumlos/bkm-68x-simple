@@ -106,6 +106,8 @@ It is generally recommended to use CSYNC signals at 75 Ohm levels.
 
 Revision history:
 
+D1: Add STBY_5V pinheader for easier outside-monitor-programming of FPGA.
+
 D: Add DC restore and sync-removal circuit on Y/G line
 
 C1: Minor layout changes
