@@ -10,4 +10,6 @@
   (lib (name tc7wh125)(type Legacy)(uri ${KIPRJMOD}/tc7wh125.lib)(options "")(descr ""))
   (lib (name FPGA_Intel)(type Legacy)(uri ${KIPRJMOD}/FPGA_Intel.lib)(options "")(descr ""))
   (lib (name ISL4089)(type Legacy)(uri ${KIPRJMOD}/isl4089.lib)(options "")(descr ""))
+  (lib (name tps723xx)(type Legacy)(uri ${KIPRJMOD}/tps723xx.lib)(options "")(descr ""))
+  (lib (name 74LVCxG34)(type Legacy)(uri ${KIPRJMOD}/74LVCxG34.lib)(options "")(descr ""))
 )
