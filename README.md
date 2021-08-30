@@ -12,7 +12,10 @@ that speaks to the monitor.
 The analog section buffers the video by an THS7374 (with the LPF disabled!) and throws
 those through an ADG1611 (or compatible) switch, working via the VIDEO_OE_X signal from
 the FPGA. The Y/G signal is first routed through an ISL4089 which strips the sync part 
-(if needed) from the signal to avoid too bright picture in YPbPr and SoG signals.
+(if needed) from the signal to avoid too bright picture in YPbPr and SoG signals. This
+is however only done if the input is YPbPr at 480p and below and for RGsB signals.
+In version 1.1 of the software, this can be switched by turning aperture on. This might
+be removed later though, as this is somewhat for testing.
 
 The sync signal is separated through an ISL59885 with a color filter in front (as per
 the datasheet), and the signal to be separated (external or Y signal) is chosen via
@@ -27,7 +30,6 @@ original 68X service manual. The card thus tries to be electrically similar to t
 original, at the interface level.
 
 The FPGA is expected to be programmed with the HDL from https://github.com/skumlos/bkm-68x-fpga
-(unless something better appears).
 
 75 Ohm termination can be selected by the switches, which either terminates, or passthroughs
 (in that case external terminators are needed, unless signal is actually passed through to a
@@ -38,7 +40,7 @@ as it originally is (buffered and level conditioned).
 
 Compared to the original BKM-68X, this has severely better sync handling seemingly.
 
-The list of tested consoles that syncs fine as of revision C1. is:
+The list of tested consoles that syncs fine as of revision E1 is:
 
 SNES (2CHIP US) 60Hz (CSYNC)
 
@@ -70,15 +72,21 @@ Master System (EU, VA3, no DFO) 50Hz (CSYNC)
 
 Nintendo 64 (NUSJ) 60Hz (THS7314 RGB) (CSYNC)
 
-PSone SCPH-101 (EU) (MM3+MFO) 60Hz (RGC CSYNC)
-
-PSone SCPH-101 (EU) (MM3+MFO) 50Hz (RGC CSYNC)
-
 Wii (EU) 576i 50Hz (YPbPr)
 
 Wii (EU) 480i 60Hz (YPbPr)
 
 Wii (EU) 480p 60Hz (YPbPr)
+
+PSone SCPH-101 (EU) (MM3+MFO) 60Hz (RGC CSYNC)
+
+PSone SCPH-101 (EU) (MM3+MFO) 50Hz (RGC CSYNC)
+
+PS2 (US) 240p/480i 60Hz (RGBS)
+
+PS2 (US) 480p 60Hz (RGsB)
+
+PS2 (US) 240p/480i/480p (YPbPr)
 
 PS3 (EU) 576i 50Hz (YPbPr)
 
@@ -94,6 +102,10 @@ Analogue Nt Mini 2.0 60Hz RGBS (so CSYNC)
 
 Amiga 500 RGBS (PAL) 50Hz (CSYNC)
 
+Xbox 360 (EU) 480i/480p/720p 50/60Hz (YPbPr)
+
+Xbox 360 (EU) 1080i 60Hz (YPbPr) (1080i 50Hz seems to just flicker. Does the same with original 68X)
+
 A load of MiSTer cores which are normally deemed problematic, including DoDonPachi
 whose whack VSYNC of 57.6 Hz makes the original BKM-68X scroll the picture with a
 steady OSD, while this version has a steady picture with a rolling OSD :)
@@ -105,6 +117,10 @@ the color filter it is unusable.
 It is generally recommended to use CSYNC signals at 75 Ohm levels.
 
 Revision history:
+
+E1: Add "proper" 5V->3.3V translation for sync lines
+
+E: Add "Y/G normalization" control from FPGA
 
 D1: Add STBY_5V pinheader for easier outside-monitor-programming of FPGA.
 
