@@ -6,11 +6,11 @@ encoding utf-8
 Sheet 3 5
 Title "BKM-68X Alternative"
 Date ""
-Rev ""
+Rev "F"
 Comp "L33T TEK"
-Comment1 ""
-Comment2 ""
-Comment3 ""
+Comment1 "Martin Hejnfelt"
+Comment2 "martin@hejnfelt.com"
+Comment3 "www.immerhax.com"
 Comment4 ""
 $EndDescr
 $Comp

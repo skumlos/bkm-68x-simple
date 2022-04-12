@@ -12,4 +12,7 @@
   (lib (name ISL4089)(type Legacy)(uri ${KIPRJMOD}/isl4089.lib)(options "")(descr ""))
   (lib (name tps723xx)(type Legacy)(uri ${KIPRJMOD}/tps723xx.lib)(options "")(descr ""))
   (lib (name 74LVCxG34)(type Legacy)(uri ${KIPRJMOD}/74LVCxG34.lib)(options "")(descr ""))
+  (lib (name ldo-en-pg)(type Legacy)(uri ${KIPRJMOD}/ldo-en-pg.lib)(options "")(descr ""))
+  (lib (name Efinix_FPGA)(type Legacy)(uri ${KIPRJMOD}/Efinix_FPGA.lib)(options "")(descr ""))
+  (lib (name FSA2257)(type Legacy)(uri ${KIPRJMOD}/FSA2257.lib)(options "")(descr ""))
 )
