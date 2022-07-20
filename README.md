@@ -19,15 +19,14 @@ be removed later though, as this is somewhat for testing.
 
 The sync signal is separated through an ISL59885 with a color filter in front (as per
 the datasheet), and the signal to be separated (external or Y signal) is chosen via
-INT_EXT_X signal to an ADG734 switch.
+INT_EXT_X signal to an FSA2257MUX switch.
 
 These are then passed to the FPGA which detects sync polarity and changes accordingly
 to positive sync, and then sends the two signals into the monitor.
 
-The digital section consists of a FPGA (Intel MAX 10 in an EQFP-144 package as of this
-writing) with a buttload of schmitt triggers and line drivers, all replicated from the
-original 68X service manual. The card thus tries to be electrically similar to the
-original, at the interface level.
+The digital section consists of a FPGA (efinix Trion T8Q144) with a buttload of schmitt
+triggers and line drivers, all replicated from the original 68X service manual. The
+card thus tries to be electrically similar to the original, at the interface level.
 
 The FPGA is expected to be programmed with the HDL from https://github.com/skumlos/bkm-68x-fpga
 
@@ -117,6 +116,8 @@ the color filter it is unusable.
 It is generally recommended to use CSYNC signals at 75 Ohm levels.
 
 Revision history:
+
+F1-5: A ton of changes, most notably Intel MAX10 FPGA has been change to efinix Trion T8Q144 and ADG734 -> FSA2257MUX
 
 E1: Add "proper" 5V->3.3V translation for sync lines
 
